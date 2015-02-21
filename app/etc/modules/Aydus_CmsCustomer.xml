@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * CmsDownloadAuth module
+ *
+ * @category   Aydus
+ * @package    Aydus_CmsCustomer
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_CmsCustomer>
+             <active>true</active>
+             <codePool>community</codePool>
+        </Aydus_CmsCustomer>
+    </modules>
+</config>

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CmsCustomer config
+ *
+ * @category   Aydus
+ * @package    Aydus_CmsCustomer
+ * @author     Aydus Consulting <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_CmsCustomer>
+            <version>0.1.0</version>
+        </Aydus_CmsCustomer>
+    </modules>
+    <frontend>
+    	<events>
+            <controller_action_predispatch_cms_page_view>
+                <observers>
+                    <aydus_cmscustomer>
+                        <class>aydus_cmscustomer/observer</class>
+                        <method>authenticate</method>
+                    </aydus_cmscustomer>
+                </observers>
+            </controller_action_predispatch_cms_page_view>    	
+    	</events>      
+    </frontend>
+    <global>    
+        <helpers>
+            <aydus_cmscustomer>
+                <class>Aydus_CmsCustomer_Helper</class>
+            </aydus_cmscustomer>
+        </helpers>    
+        <models>
+            <aydus_cmscustomer>
+                <class>Aydus_CmsCustomer_Model</class>
+            </aydus_cmscustomer>
+        </models>
+        <resources>
+            <aydus_cmscustomer_setup>
+                <setup>
+                    <module>Aydus_CmsCustomer</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aydus_cmscustomer_setup>        
+        </resources>                
+    </global>         
+</config>
